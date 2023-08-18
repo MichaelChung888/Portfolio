@@ -1,0 +1,77 @@
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--color-lightblue0);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+.nav-header {
+    color: var(--color-blue);
+    font-size: 50px;
+    margin: auto 30px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-list li {
+    transition: all 0.3s;
+}
+
+.nav-list li:hover {
+    transition: all 0.3s;
+    border-bottom: 2px var(--color-blue) solid;
+    transform: translateY(-20%);
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+
+#nav-icon {
+    margin: 7px;
+    margin-left: 0;
+}
+
+.nav-button-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button {
+    margin: auto;
+    color: var(--color-text);
+    background-color: var(--color-blue);
+    border: none;
+    width: 120px;
+    height: 45px;
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Arial, Helvetica, sans-serif';
+    border-radius: 5px;
+    text-align: center;
+    padding: auto;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+}

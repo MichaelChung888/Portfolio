@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael's Portfolio</title>
+
+    <link href="StylesAndImages/main.css" rel="stylesheet">
+    <script defer src="app.js"></script>
+
+    <script src="https://kit.fontawesome.com/7d6d0311a0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.20.1/core.min.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <h1 class="nav-header hidden-top">Michael</h1>
+        <ul class="nav-list hidden-top">
+            <li><a href="#welcome-section"><i id="nav-icon" class="fa-solid fa-house" style="color: #00abe4;"></i>Home</a></li>
+            <li><a href="#about"><i id="nav-icon" class="fa-solid fa-user" style="color: #00abe4;"></i>About</a></li>
+            <li><a href="#project"><i id="nav-icon" class="fa-solid fa-folder-open" style="color: #00abe4;"></i>Portfolio</a></li>
+            <li><a href="#contact"><i id="nav-icon" class="fa-solid fa-phone" style="color: #00abe4;"></i>Contact</a></li>
+        </ul>
+        <div class="nav-button-container hidden-top"><a href="#contact"><button class="nav-button">Hire Me</button></a></div>
+    </nav>
+
+    <section id="welcome-section">
+        <div id="particles-js"></div>
+        <div class="welcome-grid hidden-left">
+            <div>
+                <div class="dynamic-header"></div>
+                <!--
+                <ul class="dynamic-header">
+                    <li><span class="line1">Hi, my name is</span></li>
+                    <li><span class="line2">Michael Chung</span></li>
+                    <li><span class="line3">I'm a Junior Software</span></li>
+                    <li><span class="line4">and Web Developer</span></li>
+                </ul>
+                -->
+                <p class="welcome-p">"Highly motivated student with a career interest in Software development and Web design."</p>
+                <div class="welcome-icons">
+                    <i class="fa-brands fa-html5 fa-2xl" style="color: #e02e00;"></i>
+                    <i class="fa-brands fa-css3-alt fa-2xl" style="color: #006eba;"></i>
+                    <i class="fa-brands fa-square-js fa-2xl" style="color: #e4bd00;"></i>
+                    <i class="fa-brands fa-react fa-2xl" style="color: #61dafb;"></i>
+                </div>
+            </div>
+        </div>
+        <img src="StylesAndImages/picture.jpg" class="welcome-picture">
+    </section>
+    <section id="about" class="about">
+        <h2 class="about-header">About me</h2>
+        <div class="br"></div>
+        <div class="about-container">
+            <div>
+                <h2>Developing With a Passion While Exploring The World.</h2>
+                <div class="br"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="about-info2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+            <div>
+                <img class="about-picture" src="work1.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="project">
+        <div class="project-padding">
+            <h2 class="project-header">Here is a showcase of some of my work</h2>
+            <div class="br"></div>
+        </div>
+
+        <div class="project-grid-container">
+            <div class="project-grid">
+                <div class="project-container">
+                    <a><img class="project-image" src="work1.jpg"></a>
+                    <h2 class="project-title">Technical Document</h2>
+                </div>
+                <div class="project-container">
+                    <a><img class="project-image" src="work2.jpg"></a>
+                    <h2 class="project-title">Piano</h2>
+                </div>
+                <div class="project-container">
+                    <a><img class="project-image"></a>
+                    <h2 class="project-title"></h2>
+                </div>
+                <div class="project-container">
+                    <a><img class="project-image"></a>
+                    <h2 class="project-title"></h2>
+                </div>
+                <div class="project-container">
+                    <a><img class="project-image"></a>
+                    <h2 class="project-title"></h2>
+                </div>
+                <div class="project-container">
+                    <a><img class="project-image"></a>
+                    <h2 class="project-title"></h2>
+                </div>
+            </div>
+        </div>
+        <div class="project-button-container"><a><button class="project-button">Show all</button></a></div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="contact-header">Let's Work Together...</h2>
+        <div class="br"></div>
+        <div class="contact-grid-container">
+            <div class="contact-grid"> 
+                <div class="contact-info"><i id="contact-icon" class="fa-brands fa-github" style="color: #00abe4;"></i><p>GitHub</p></div>
+                <div class="contact-info"><i id="contact-icon" class="fa-brands fa-linkedin" style="color: #00abe4;"></i><p>Linkedin</p></div>
+                <div class="contact-info"><i id="contact-icon" class="fa-solid fa-envelope" style="color: #00abe4;"></i><p>Email</p></div>
+                <div class="contact-info"><i id="contact-icon" class="fa-solid fa-phone" style="color: #00abe4;"></i><p>Phone</p></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+
+    </footer>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('Particles.js loaded!');
+        });
+    </script>
+</body>
+</html>

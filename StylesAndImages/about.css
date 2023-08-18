@@ -1,0 +1,40 @@
+/* ABOUT */
+.about {
+    height: 150vh;
+    width: 100%;
+    padding: 5% 10%;
+    background-color: var(--color-white);
+}
+
+.about-header {
+    text-align: center;
+    font-size: 50px;
+}
+
+.br {
+   width: 100%;
+   border-bottom: 3px double var(--color-blue);
+   margin: 20px; 
+   position: relative;
+   right: 20px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+}
+
+.about-info2 {
+    position: relative;
+}
+
+.about-info2 p {
+    position: absolute;
+    bottom: 10px;
+}
+
+.about-picture {
+    height: 350px;
+    width: auto; 
+}
