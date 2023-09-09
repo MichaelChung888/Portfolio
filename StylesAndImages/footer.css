@@ -1,0 +1,11 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    height: 5vh;
+    width: 100vw;
+    background-color: #252a2f;
+    font-family: 'Nunito Sans', sans-serif;
+}

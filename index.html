@@ -6,122 +6,200 @@
     <title>Michael's Portfolio</title>
 
     <link href="StylesAndImages/main.css" rel="stylesheet">
-    <script defer src="app.js"></script>
+    <script defer src="index.js"></script>
+    <script defer src="icons.js"></script>
 
     <script src="https://kit.fontawesome.com/7d6d0311a0.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.20.1/core.min.js"></script>
 </head>
 <body>
+
     <nav id="navbar">
-        <h1 class="nav-header hidden-top">Michael</h1>
+        <h1 class="nav-header hidden-top">michael.dev</h1>
         <ul class="nav-list hidden-top">
-            <li><a href="#welcome-section"><i id="nav-icon" class="fa-solid fa-house" style="color: #00abe4;"></i>Home</a></li>
-            <li><a href="#about"><i id="nav-icon" class="fa-solid fa-user" style="color: #00abe4;"></i>About</a></li>
-            <li><a href="#project"><i id="nav-icon" class="fa-solid fa-folder-open" style="color: #00abe4;"></i>Portfolio</a></li>
-            <li><a href="#contact"><i id="nav-icon" class="fa-solid fa-phone" style="color: #00abe4;"></i>Contact</a></li>
+            <li><a href="#welcome-section" id="navHome"><i id="nav-icon" class="fa-solid fa-house" style="color: #00abe4;"></i>Home</a></li>
+            <li><a href="#about" id="navAbout"><i id="nav-icon" class="fa-solid fa-user" style="color: #00abe4;"></i>About</a></li>
+            <li><a href="#project" id="navProject"><i id="nav-icon" class="fa-solid fa-folder-open" style="color: #00abe4;"></i>Portfolio</a></li>
+            <li><a href="#contact" id="navContact"><i id="nav-icon" class="fa-solid fa-phone" style="color: #00abe4;"></i>Contact</a></li>
         </ul>
-        <div class="nav-button-container hidden-top"><a href="#contact"><button class="nav-button">Hire Me</button></a></div>
+        <!--
+            <button class="button" role="button">
+                <span class="text"></span>
+                <span>Let's Connect</span>
+            </button>
+        -->
+
     </nav>
 
     <section id="welcome-section">
         <div id="particles-js"></div>
-        <div class="welcome-grid hidden-left">
-            <div>
-                <div class="dynamic-header"></div>
-                <!--
-                <ul class="dynamic-header">
-                    <li><span class="line1">Hi, my name is</span></li>
-                    <li><span class="line2">Michael Chung</span></li>
-                    <li><span class="line3">I'm a Junior Software</span></li>
-                    <li><span class="line4">and Web Developer</span></li>
-                </ul>
-                -->
-                <p class="welcome-p">"Highly motivated student with a career interest in Software development and Web design."</p>
-                <div class="welcome-icons">
-                    <i class="fa-brands fa-html5 fa-2xl" style="color: #e02e00;"></i>
-                    <i class="fa-brands fa-css3-alt fa-2xl" style="color: #006eba;"></i>
-                    <i class="fa-brands fa-square-js fa-2xl" style="color: #e4bd00;"></i>
-                    <i class="fa-brands fa-react fa-2xl" style="color: #61dafb;"></i>
+        <div class="welcome-container hidden">
+            <div class="welcome-header">Hi, I am Michael</div>
+            <div class="welcome-dynamic-header">Junior <span class="typewriter">Software Developer</span></div>
+            <p class="welcome-p">Welcome to my Portfolio, a website where I demonstrate my coding projects. Explore my work and learn more about me as a Junior Developer.</p>
+            <a href="#about" class="welcome-learn">Learn More <i class="fa-regular fa-circle-right"></i></a>
+        </div>
+        <img id="welcome-pic" src="StylesAndImages/welcomePic.svg" class="welcome-pic scroll hidden">
+
+        <!--
+        <img src="StylesAndImages/picture.jpg" class="welcome-picture hidden">
+        -->
+    </section>
+
+    <section id="about" class="about">
+            <div class="about-container">
+                <h2 class="about-header hidden-right">A little bit about me</h2>
+                <div class="br hidden-right anim200"></div>
+                <p class="about-subtitle hidden-right anim200">Third year student - Electrical Information Engineering Bsc - Imperial College London</p>
+                <div class="br hidden-right anim200"></div>
+                <div class="about-grid">
+                    
+                    <div class="about-picture-container hidden-left anim800">
+                        <img class="about-picture" src="StylesAndImages/SuitPhoto-PhotoRoom.png">
+                    </div>
+                    <div class="about-icons hidden-left anim800">
+                        <a href="https://www.linkedin.com/in/michael-chung-528428263/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl" style="color: #00abe4;"></i></a>
+                        <a href="mailto: michaelyiuhonchung@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl" style="color: #00abe4;"></i></a>
+                        <a href="https://github.com/MichaelChung888" target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #00abe4;"></i></a>
+                    </div>
+                    <div class="hidden-right anim800 about-text" style="margin-top: 10px;">
+                        <p>Hello again! I'm Michael Chung, currently in my final year finishing my degree in EIE at Imperial College London.</p>
+                        <br>
+                        <p>Inspired about pursuing a career within the software industry, I have developed essential skills throughout my degree and countless projects outside of my academics.</p>
+                        <br>
+                        <p>A field that recently caught my interest was Fullstack development where I completed the Front and Back end development courses offered by freeCodeCamp. In doing so I have been able to build numerous projects, which two in particular are my most recent ones shown <a href="#project">below.</a></p>
+                        <br>
+                        <p>As of currently, I am always looking for new ways to advance and refine my skills and if your interested to work together, feel free to contact me <a href="#contact">below.</a></p>
+                    </div>
+
                 </div>
             </div>
-        </div>
-        <img src="StylesAndImages/picture.jpg" class="welcome-picture">
-    </section>
-    <section id="about" class="about">
-        <h2 class="about-header">About me</h2>
-        <div class="br"></div>
-        <div class="about-container">
-            <div>
-                <h2>Developing With a Passion While Exploring The World.</h2>
-                <div class="br"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="about-info2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            
+            <div class="tech-container">
+                <h2 class="about-header hidden-right">Tech Stack</h2>
+                <div class="br hidden-right anim200"></div>
+                <p class="about-subtitle hidden-right anim-200">Technical Skills - Programming Experience</p>
+                <div class="br hidden-right anim200"></div>
+                <div class="tech-grid">
 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <div class="tech-item hidden-left anim200">
+                        <div class="tech-icon" id="HTML"></div>
+                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">HTML</p>
+                    </div>
+
+                    <div class="tech-item hidden-left anim400">
+                        <div class="tech-icon" id="CSS"></div>
+                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">CSS</p>
+                    </div>
+
+                    <div class="tech-item hidden-left anim600">
+                        <div class="tech-icon" id="JavaScript"></div>
+                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">JavaScript</p>
+                    </div>
+
+                    <div class="tech-item hidden-left anim800">
+                        <div class="tech-icon" id="React"></div>
+                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">React</p>
+                    </div>
+
+                    <div class="tech-item hidden-left anim1000">
+                        <div class="tech-icon" id="Tailwind"></div>
+                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">Tailwind</p>
+                    </div>
+
+                    <div class="tech-item hidden-left anim1200">
+                        <div class="tech-icon" id="jQuery"></div>
+                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">jQuery</p>
+                    </div>
+
+                    <div class="tech-item hidden-left anim1400">
+                        <div class="tech-icon" id="Sass"></div>
+                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">Sass</p>
+                    </div>
+
+                    <div class="tech-item hidden-left anim1600">
+                        <div class="tech-icon" id="MongoDB"></div>
+                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">MongoDB</p>
+                    </div>
+
+                    <div class="tech-item hidden-left anim1800">
+                        <div class="tech-icon" id="NodeJs"></div>
+                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">NodeJs</p>
+                    </div>
+
+                    <div class="tech-item hidden-left anim1800">
+                        <div class="tech-icon" id="ExpressJs"></div>
+                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">ExpressJs</p>
+                    </div>
+
+                    <div class="tech-item hidden-left anim1800">
+                        <div class="tech-icon" id="Python"></div>
+                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">Python</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="about-picture" src="work1.jpg">
-            </div>
-        </div>
-    </section>
+
+    </section>  
 
     <section id="project" class="project">
-        <div class="project-padding">
-            <h2 class="project-header">Here is a showcase of some of my work</h2>
-            <div class="br"></div>
-        </div>
+        <h2 class="project-header">Here is a showcase of some of my work</h2>
+        <div class="br"></div>
+        <div class="project-container">
 
-        <div class="project-grid-container">
-            <div class="project-grid">
-                <div class="project-container">
-                    <a><img class="project-image" src="work1.jpg"></a>
-                    <h2 class="project-title">Technical Document</h2>
-                </div>
-                <div class="project-container">
-                    <a><img class="project-image" src="work2.jpg"></a>
-                    <h2 class="project-title">Piano</h2>
-                </div>
-                <div class="project-container">
-                    <a><img class="project-image"></a>
-                    <h2 class="project-title"></h2>
-                </div>
-                <div class="project-container">
-                    <a><img class="project-image"></a>
-                    <h2 class="project-title"></h2>
-                </div>
-                <div class="project-container">
-                    <a><img class="project-image"></a>
-                    <h2 class="project-title"></h2>
-                </div>
-                <div class="project-container">
-                    <a><img class="project-image"></a>
-                    <h2 class="project-title"></h2>
+            <img src="StylesAndImages/ChatApp.JPG" class="project-pic hidden-left">
+            <div class="project-text-container">
+                <div class="project-text hidden-right">
+                    <h2>MichaelChatApp</h2>
+                    <p>A MERN Chat application where you can send and recieve messages in Real Time. It includes features such as User authentication, 
+                        Cookies for storing client information, and file uploads across chats.
+                    </p>
+                    <h3>Made with</h3>
+                    <ul class="projectIcons-1 left"></ul>
+                    <h3 class="project-links"><a target="_blank" href="https://michaelchatapp-backend.onrender.com/">Deploy server</a> | <a target="_blank" href="https://michaelchatapp.onrender.com/">Live site</a> | <a target="_blank" href="https://github.com/MichaelChung888/MichaelChatApp-Frontend">Github</a></h3>
                 </div>
             </div>
+
+            <div class="project-text-container">
+                <div class="project-text hidden-left">
+                    <h2>WeatherApp</h2>
+                    <p>An application that gives you the weather forecast of any desired location. It includes features such as a dynamic search bar and a map UI fetched from MapBox API.
+                        The rest of the weather data comes from OpenWeatherMap API.
+                    </p>
+                    <h3>Made with</h3>
+                    <ul class="projectIcons-2" style="justify-content: flex-end;"></ul>
+                    <h3 class="project-links"><a target="_blank" href="https://michaelchung888.github.io/WeatherApp/">Live site</a> | <a target="_blank" href="https://github.com/MichaelChung888/WeatherApp">Github</a></h3>
+                </div>
+            </div>
+
+            <img src="StylesAndImages/WeatherApp.JPG" class="project-pic hidden-right">
         </div>
-        <div class="project-button-container"><a><button class="project-button">Show all</button></a></div>
+
+
+        <div class="project-container"></div>
     </section>
 
     <section id="contact" class="contact">
-        <h2 class="contact-header">Let's Work Together...</h2>
-        <div class="br"></div>
-        <div class="contact-grid-container">
+        <div class="hidden">
+            <h2 class="contact-header">Let's Work Together...</h2>
+            <div class="contact-paragraph">
+                <p>Thank you for viewing my portfolio.</p>
+                <p> If you have any questions about me or my projects, feel free to contact me </p>
+            </div>
+    
             <div class="contact-grid"> 
-                <div class="contact-info"><i id="contact-icon" class="fa-brands fa-github" style="color: #00abe4;"></i><p>GitHub</p></div>
-                <div class="contact-info"><i id="contact-icon" class="fa-brands fa-linkedin" style="color: #00abe4;"></i><p>Linkedin</p></div>
-                <div class="contact-info"><i id="contact-icon" class="fa-solid fa-envelope" style="color: #00abe4;"></i><p>Email</p></div>
-                <div class="contact-info"><i id="contact-icon" class="fa-solid fa-phone" style="color: #00abe4;"></i><p>Phone</p></div>
+                <a href="https://github.com/MichaelChung888" target="_blank"><i id="contact-icon" class="fa-brands fa-github" style="color: #00abe4;"></i><p>GitHub</p></a>
+                <a href="https://www.linkedin.com/in/michael-chung-528428263/" target="_blank"><i id="contact-icon" class="fa-brands fa-linkedin" style="color: #00abe4;"></i><p>Linkedin</p></a>
+                <a href="mailto: michaelyiuhonchung@gmail.com" target="_blank"><i id="contact-icon" class="fa-solid fa-envelope" style="color: #00abe4;"></i><p>Email</p></a>
             </div>
         </div>
-    </section>
-    <footer class="footer">
 
-    </footer>
+    </section>
+
+    <div class="footer">
+        Developed and Designed by Michael Chung 2023
+    </div>
+
     <script>
         particlesJS.load('particles-js', 'particles.json', function() {
             console.log('Particles.js loaded!');
