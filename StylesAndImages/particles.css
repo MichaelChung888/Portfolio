@@ -1,8 +1,0 @@
-/* PARTICLES */
-#particles-js {
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    position: absolute;
-    z-index: 1;
-}

@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+
+.hiddenAnim {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+}
+
+.hiddeAnimn-top {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateY(-50%); 
+}
+
+.hiddenAnim-left {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-50%);
+    transition: all 1s;
+}
+
+.hiddenAnim-right {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(50%);
+    transition: all 1s;
+}
+
+.hiddenAnim-bottom {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(50%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+/* ---- Particles ------------------------------------------------------------------------ */
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+/* ---- Tech Icons ----------------------------------------------------------------------- */
+
+#tech-icon-text {
+    margin-top:7px; 
+    color:white    
+}
+
+.tech-icon {
+    color: white;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---- General Icons -------------------------------------------------------------------- */
+
+#icons{
+    transition: all 0.5s;
+}
+
+#icons:hover {
+    transform: translateY(-5px);
+    text-shadow: 0 0 11px rgba(200, 200, 200, 0.7); 
+}
+
+/* ---- Project Icons -------------------------------------------------------------------- */
+
+#project-icons {
+    display: flex;
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+#project-icons li {
+    margin-right: 10px;
+    fill: black;
+}

@@ -5,205 +5,402 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael's Portfolio</title>
 
-    <link href="StylesAndImages/main.css" rel="stylesheet">
-    <script defer src="index.js"></script>
-    <script defer src="icons.js"></script>
+    <link href="output.css" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/7d6d0311a0.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script> particlesJS.load('particles-js', 'particles.json', function() { console.log('Particles.js loaded!');}); </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script defer src="scripts/index.js"></script>
+    <script defer src="scripts/icons.js"></script>
 </head>
-<body>
-
-    <nav id="navbar">
-        <h1 class="nav-header hidden-top">michael.dev</h1>
-        <ul class="nav-list hidden-top">
-            <li><a href="#welcome-section" id="navHome"><i id="nav-icon" class="fa-solid fa-house" style="color: #00abe4;"></i>Home</a></li>
-            <li><a href="#about" id="navAbout"><i id="nav-icon" class="fa-solid fa-user" style="color: #00abe4;"></i>About</a></li>
-            <li><a href="#project" id="navProject"><i id="nav-icon" class="fa-solid fa-folder-open" style="color: #00abe4;"></i>Portfolio</a></li>
-            <li><a href="#contact" id="navContact"><i id="nav-icon" class="fa-solid fa-phone" style="color: #00abe4;"></i>Contact</a></li>
-        </ul>
-        <!--
-            <button class="button" role="button">
-                <span class="text"></span>
-                <span>Let's Connect</span>
-            </button>
-        -->
-
-    </nav>
-
-    <section id="welcome-section">
-        <div id="particles-js"></div>
-        <div class="welcome-container hidden">
-            <div class="welcome-header">Hi, I am Michael</div>
-            <div class="welcome-dynamic-header">Junior <span class="typewriter">Software Developer</span></div>
-            <p class="welcome-p">Welcome to my Portfolio, a website where I demonstrate my coding projects. Explore my work and learn more about me as a Junior Developer.</p>
-            <a href="#about" class="welcome-learn">Learn More <i class="fa-regular fa-circle-right"></i></a>
-        </div>
-        <img id="welcome-pic" src="StylesAndImages/welcomePic.svg" class="welcome-pic scroll hidden">
-
-        <!--
-        <img src="StylesAndImages/picture.jpg" class="welcome-picture hidden">
-        -->
-    </section>
-
-    <section id="about" class="about">
-            <div class="about-container">
-                <h2 class="about-header hidden-right">A little bit about me</h2>
-                <div class="br hidden-right anim200"></div>
-                <p class="about-subtitle hidden-right anim200">Third year student - Electrical Information Engineering Bsc - Imperial College London</p>
-                <div class="br hidden-right anim200"></div>
-                <div class="about-grid">
-                    
-                    <div class="about-picture-container hidden-left anim800">
-                        <img class="about-picture" src="StylesAndImages/SuitPhoto-PhotoRoom.png">
-                    </div>
-                    <div class="about-icons hidden-left anim800">
-                        <a href="https://www.linkedin.com/in/michael-chung-528428263/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl" style="color: #00abe4;"></i></a>
-                        <a href="mailto: michaelyiuhonchung@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl" style="color: #00abe4;"></i></a>
-                        <a href="https://github.com/MichaelChung888" target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #00abe4;"></i></a>
-                    </div>
-                    <div class="hidden-right anim800 about-text" style="margin-top: 10px;">
-                        <p>Hello again! I'm Michael Chung, currently in my final year finishing my degree in EIE at Imperial College London.</p>
-                        <br>
-                        <p>Inspired about pursuing a career within the software industry, I have developed essential skills throughout my degree and countless projects outside of my academics.</p>
-                        <br>
-                        <p>A field that recently caught my interest was Fullstack development where I completed the Front and Back end development courses offered by freeCodeCamp. In doing so I have been able to build numerous projects, which two in particular are my most recent ones shown <a href="#project">below.</a></p>
-                        <br>
-                        <p>As of currently, I am always looking for new ways to advance and refine my skills and if your interested to work together, feel free to contact me <a href="#contact">below.</a></p>
-                    </div>
-
-                </div>
-            </div>
-            
-            <div class="tech-container">
-                <h2 class="about-header hidden-right">Tech Stack</h2>
-                <div class="br hidden-right anim200"></div>
-                <p class="about-subtitle hidden-right anim-200">Technical Skills - Programming Experience</p>
-                <div class="br hidden-right anim200"></div>
-                <div class="tech-grid">
-
-                    <div class="tech-item hidden-left anim200">
-                        <div class="tech-icon" id="HTML"></div>
-                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">HTML</p>
-                    </div>
-
-                    <div class="tech-item hidden-left anim400">
-                        <div class="tech-icon" id="CSS"></div>
-                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">CSS</p>
-                    </div>
-
-                    <div class="tech-item hidden-left anim600">
-                        <div class="tech-icon" id="JavaScript"></div>
-                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">JavaScript</p>
-                    </div>
-
-                    <div class="tech-item hidden-left anim800">
-                        <div class="tech-icon" id="React"></div>
-                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">React</p>
-                    </div>
-
-                    <div class="tech-item hidden-left anim1000">
-                        <div class="tech-icon" id="Tailwind"></div>
-                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">Tailwind</p>
-                    </div>
-
-                    <div class="tech-item hidden-left anim1200">
-                        <div class="tech-icon" id="jQuery"></div>
-                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">jQuery</p>
-                    </div>
-
-                    <div class="tech-item hidden-left anim1400">
-                        <div class="tech-icon" id="Sass"></div>
-                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">Sass</p>
-                    </div>
-
-                    <div class="tech-item hidden-left anim1600">
-                        <div class="tech-icon" id="MongoDB"></div>
-                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">MongoDB</p>
-                    </div>
-
-                    <div class="tech-item hidden-left anim1800">
-                        <div class="tech-icon" id="NodeJs"></div>
-                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">NodeJs</p>
-                    </div>
-
-                    <div class="tech-item hidden-left anim1800">
-                        <div class="tech-icon" id="ExpressJs"></div>
-                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">ExpressJs</p>
-                    </div>
-
-                    <div class="tech-item hidden-left anim1800">
-                        <div class="tech-icon" id="Python"></div>
-                        <p style="font-weight: bold; font-size: 1rem; margin-top:7px;">Python</p>
-                    </div>
-                </div>
-            </div>
-
-    </section>  
-
-    <section id="project" class="project">
-        <h2 class="project-header">Here is a showcase of some of my work</h2>
-        <div class="br"></div>
-        <div class="project-container">
-
-            <img src="StylesAndImages/ChatApp.JPG" class="project-pic hidden-left">
-            <div class="project-text-container">
-                <div class="project-text hidden-right">
-                    <h2>MichaelChatApp</h2>
-                    <p>A MERN Chat application where you can send and recieve messages in Real Time. It includes features such as User authentication, 
-                        Cookies for storing client information, and file uploads across chats.
-                    </p>
-                    <h3>Made with</h3>
-                    <ul class="projectIcons-1 left"></ul>
-                    <h3 class="project-links"><a target="_blank" href="https://michaelchatapp-backend.onrender.com/">Deploy server</a> | <a target="_blank" href="https://michaelchatapp.onrender.com/">Live site</a> | <a target="_blank" href="https://github.com/MichaelChung888/MichaelChatApp-Frontend">Github</a></h3>
-                </div>
-            </div>
-
-            <div class="project-text-container">
-                <div class="project-text hidden-left">
-                    <h2>WeatherApp</h2>
-                    <p>An application that gives you the weather forecast of any desired location. It includes features such as a dynamic search bar and a map UI fetched from MapBox API.
-                        The rest of the weather data comes from OpenWeatherMap API.
-                    </p>
-                    <h3>Made with</h3>
-                    <ul class="projectIcons-2" style="justify-content: flex-end;"></ul>
-                    <h3 class="project-links"><a target="_blank" href="https://michaelchung888.github.io/WeatherApp/">Live site</a> | <a target="_blank" href="https://github.com/MichaelChung888/WeatherApp">Github</a></h3>
-                </div>
-            </div>
-
-            <img src="StylesAndImages/WeatherApp.JPG" class="project-pic hidden-right">
-        </div>
-
-
-        <div class="project-container"></div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="hidden">
-            <h2 class="contact-header">Let's Work Together...</h2>
-            <div class="contact-paragraph">
-                <p>Thank you for viewing my portfolio.</p>
-                <p> If you have any questions about me or my projects, feel free to contact me </p>
-            </div>
+<body class="overflow-x-hidden">
+    <div id="particles-js"></div>
     
-            <div class="contact-grid"> 
-                <a href="https://github.com/MichaelChung888" target="_blank"><i id="contact-icon" class="fa-brands fa-github" style="color: #00abe4;"></i><p>GitHub</p></a>
-                <a href="https://www.linkedin.com/in/michael-chung-528428263/" target="_blank"><i id="contact-icon" class="fa-brands fa-linkedin" style="color: #00abe4;"></i><p>Linkedin</p></a>
-                <a href="mailto: michaelyiuhonchung@gmail.com" target="_blank"><i id="contact-icon" class="fa-solid fa-envelope" style="color: #00abe4;"></i><p>Email</p></a>
+    <!-- Navigation -->
+    <header class="fixed inset-x-0 top-0 z-50">
+        <!-- NavBar -->
+        <nav id="navbar" class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img class="h-8 w-auto" src="styles/images/coding.svg" alt="">
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" onclick="OpenMenu()">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div id="navbar-list" class="hidden lg:flex lg:gap-x-12">
+                <a href="#home" class="text-sm font-semibold leading-6 text-gray-900 underline decoration-indigo-600 decoration-2 underline-offset-4">Home</a>
+                <a href="#about" class="text-sm font-semibold leading-6 text-gray-900 decoration-indigo-600 decoration-2 underline-offset-4">About</a>
+                <a href="#project" class="text-sm font-semibold leading-6 text-gray-900 decoration-indigo-600 decoration-2 underline-offset-4">Portfolio</a>
+                <a href="#contact" class="text-sm font-semibold leading-6 text-gray-900 decoration-indigo-600 decoration-2 underline-offset-4">Contact</a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <p class="text-md font-semibold leading-6 text-indigo-600">michael.dev</p>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div id="Menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" onclick="CloseMenu()">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#home" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+                            <a href="#about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
+                            <a href="#project" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Portfolio</a>
+                            <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </header>
 
-    </section>
+    <!-- Home -->
+    <div id="home" class="bg-opacity-0 lg:h-screen">
+        <div class="relative isolate px-6 pt-0 lg:pt-14 lg:px-8">
+            <!-- Background Decoration -->
+            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#9089fc] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
 
-    <div class="footer">
-        Developed and Designed by Michael Chung 2023
+            <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+                <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#9089fc] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+
+            <!-- Main Section-->
+            <div class="mx-auto max-w-xl py-32 sm:py-48 lg:py-55 hiddenAnim">
+                <div class="sm:mb-8 flex justify-center">
+                    <p class="relative rounded-full px-3 py-1 text-md leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">Hi, I am <span class="font-semibold text-indigo-600">Michael</span></p>
+                </div>
+                <div class="text-center">
+                    <div class="h-[75px] sm:h-[150px]">
+                        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Junior <span class="typewriter">Software Developer</span></h1>
+                    </div>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">Welcome to my Portfolio, a website where I demonstrate my coding projects. Explore my work and learn more about me as a Junior Developer.</p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a href="#contact" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Contact</a>
+                        <a href="#about" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     </div>
 
-    <script>
-        particlesJS.load('particles-js', 'particles.json', function() {
-            console.log('Particles.js loaded!');
-        });
-    </script>
+    <!-- About -->
+    <div id="about" class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+
+        <div class="relative">
+            <!-- Background -->
+            <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-cyan-500 to-lime-200 opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+            <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-cyan-500 to-lime-200 opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+
+            <!-- Main Section -->
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto lg:mx-0">
+                    <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl hiddenAnim">A little bit about me ...</h2>
+                    <div class="grid grid-cols-1 gap-x-20 gap-y-16 xl:grid-cols-10 sm:py-8">
+                        <div class="col-start-1 col-span-7 hiddenAnim-left anim200">
+                            <p class="mt-6 text-lg leading-8 text-gray-300">Hello again! I'm Michael, currently in my final year finishing my degree in EIE at Imperial College London.</p>
+                            <p class="mt-6 text-lg leading-8 text-gray-300">A field that recently caught my interest was Fullstack development where I completed the Front and Back end development courses offered by freeCodeCamp. In doing so I have been able to build numerous projects, which two in particular are my most recent ones shown <a href="#project" class="text-indigo-600 font-bold">below</a>.</p>
+                            <p class="mt-6 text-lg leading-8 text-gray-300">Inspired about pursuing a career within the software industry, I have developed essential skills throughout my degree and countless projects outside of my academics.</p>
+                            <p class="mt-6 text-lg leading-8 text-gray-300">As of currently, I am always looking for new ways to advance and refine my skills and if your interested to work together, feel free to contact me <a href="#contact" class="text-indigo-600 font-bold">below</a>.</p>
+                        </div>
+                        <img src="styles/images/suitphoto.png" alt="Picture of me" class="hiddenAnim-right anim200 hidden col-span-3 xl:flex rounded-lg bg-gray-100 object-cover h-[100%]">
+                    </div>
+
+                </div>
+                <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white md:flex lg:gap-x-10">
+                        <a id="icons" href="https://github.com/MichaelChung888" target="_blank"><i id="contact-icon" class=" hiddenAnim-left anim400 h-12 w-12 fa-brands fa-github p-2 fa-2x rounded-lg bg-indigo-900 text-white hover:bg-indigo-600"></i></a>
+                        <a id="icons" href="https://www.linkedin.com/in/michael-chung-528428263/" target="_blank" class=""><i id="contact-icon" class="hiddenAnim-left anim400 text-center h-12 w-12 mx-auto fa-brands fa-linkedin p-2 fa-2x rounded-lg bg-indigo-900 text-white hover:bg-indigo-600"></i></a>
+                        <a id="icons" href="mailto: michaelyiuhonchung@gmail.com" target="_blank"><i id="contact-icon" class="hiddenAnim-left anim400 text-center h-12 w-12 fa-solid fa-envelope fa-2x p-2 rounded-lg bg-indigo-900 text-white hover:bg-indigo-600"></i></a>
+                    </div>
+                    <dl class="mt-16 grid grid-cols-2 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+                        <div class="flex flex-col-reverse">
+                            <dt class="text-base leading-7 text-gray-300">Programming Experience</dt>
+                            <dd class="text-2xl font-bold leading-9 tracking-tight text-white">2+ Years</dd>
+                        </div>
+                        <div class="flex flex-col-reverse">
+                            <dt class="text-base leading-7 text-gray-300">Web App Development</dt>
+                            <dd class="text-2xl font-bold leading-9 tracking-tight text-white">1+ Years</dd>
+                        </div>
+                        <div class="flex flex-col-reverse">
+                            <dt class="text-base leading-7 text-gray-300">Fullstack Projects</dt>
+                            <dd class="text-2xl font-bold leading-9 tracking-tight text-white">3+ Completed</dd>
+                        </div>
+                        <div class="flex flex-col-reverse">
+                            <dt class="text-base leading-7 text-gray-300">Software related Courses</dt>
+                            <dd class="text-2xl font-bold leading-9 tracking-tight text-white">5+ Completed</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Tech Stack -->
+        <div class="relative mt-[300px]">
+            <!-- Background -->
+            <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+                <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-sky-300 to-indigo-700 opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+            <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+                <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+
+            <!-- Main Section -->
+            <div class="mx-auto max-w-7xl px-6 lg:px-8 mt-24 sm:mt-32">
+                <div class="mx-auto lg:mx-0">
+                    <h2 class="hiddenAnim text-4xl font-bold tracking-tight sm:text-6xl text-white">My Technical Skills ...</h2>
+                </div>
+            </div>
+
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+                <h2 class="hiddenAnim text-white font-semibold leading-8 text-gray-900 mt-14 underline decoration-indigo-600 decoration-2 underline-offset-8">Frontend Stack</h2>
+                <div class="mt-10 grid max-w-lg grid-cols-4 items-center gap-y-10 sm:grid-cols-5 lg:mx-0 lg:max-w-none lg:grid-cols-8">
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim200">
+                        <div class="tech-icon" id="HTML"></div>
+                        <p id="tech-icon-text">HTML</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim400">
+                        <div class="tech-icon" id="CSS"></div>
+                        <p id="tech-icon-text">CSS</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim600">
+                        <div class="tech-icon" id="JavaScript"></div>
+                        <p id="tech-icon-text">JavaScript</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim800">
+                        <div class="tech-icon" id="React"></div>
+                        <p id="tech-icon-text">React</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim1000">
+                        <div class="tech-icon" id="Tailwind"></div>
+                        <p id="tech-icon-text">Tailwind</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim1200">
+                        <div class="tech-icon" id="jQuery"></div>
+                        <p id="tech-icon-text">jQuery</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim1400">
+                        <div class="tech-icon" id="Sass"></div>
+                        <p id="tech-icon-text">Sass</p>
+                    </div>
+                    
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim1600">
+                        <div class="tech-icon" id="Elmish"></div>
+                        <p id="tech-icon-text">Elmish</p>
+                    </div>
+
+                </div>
+
+                <h2 class="hiddenAnim text-xl text-white font-semibold leading-8 text-gray-900 mt-14 underline decoration-indigo-600 decoration-2 underline-offset-8">Backend Stack and Databases</h2>
+                <div class="mt-10 grid max-w-lg grid-cols-4 gap-y-10 sm:max-w-xl sm:grid-cols-5 lg:mx-0 lg:max-w-none lg:grid-cols-8">
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim200">
+                        <div class="tech-icon" id="MongoDB"></div>
+                        <p id="tech-icon-text">MongoDB</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim400">
+                        <div class="tech-icon" id="NodeJs"></div>
+                        <p id="tech-icon-text">NodeJs</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim600">
+                        <div class="tech-icon fill-white" id="ExpressJs"></div>
+                        <p id="tech-icon-text">ExpressJs</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim800">
+                        <div class="tech-icon" id="Giraffe"></div>
+                        <p id="tech-icon-text">Giraffe</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim1000">
+                        <div class="tech-icon" id="Saturn"></div>
+                        <p id="tech-icon-text">Saturn</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim1200">
+                        <div class="tech-icon" id="Azure"></div>
+                        <p id="tech-icon-text">Azure</p>
+                    </div>
+                </div>
+
+                <h2 class="hiddenAnim text-xl text-white font-semibold leading-8 text-gray-900 mt-14 underline decoration-indigo-600 decoration-2 underline-offset-8">Other Programming Languages</h2>
+                <div class="mt-10 grid max-w-lg grid-cols-4 items-center gap-y-10 sm:max-w-xl sm:grid-cols-5 lg:mx-0 lg:max-w-none lg:grid-cols-8">
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim200">
+                        <div class="tech-icon" id="Python"></div>
+                        <p id="tech-icon-text">Python</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim400">
+                        <div class="tech-icon" id="FSharp"></div>
+                        <p id="tech-icon-text">F#</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim600">
+                        <div class="tech-icon" id="CSharp"></div>
+                        <p id="tech-icon-text">C#</p>
+                    </div>
+
+                    <div class="tech-item mx-auto lg:mx-0 hiddenAnim-left anim800">
+                        <div class="tech-icon" id="C++"></div>
+                        <p id="tech-icon-text">C++</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+    </div>
+
+
+
+    <!-- Projects -->
+    <div id="project" class="bg-opacity-0 py-24 sm:py-32 relative">
+        <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.300),white)] opacity-20"></div>
+        <div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
+
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto lg:mx-0">
+                <h2 class="hiddenAnim text-4xl font-bold tracking-tight sm:text-6xl">Here is a showcase of some of my work ...</h2>
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-2xl items-center px-4 py-24 sm:px-3 sm:py-24 lg:max-w-7xl lg:px-8">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2 z-10 bg-white sm:px-3 sm:py-8">                
+                <div class="hiddenAnim-right">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">MichaelChatApp</h2>
+                    <p class="mt-4 text-gray-500">A MERN Chat application where you can send and recieve messages in Real Time. It includes features such as User authentication, Cookies for storing client information, and file uploads across chats.</p>
+            
+                    <dl class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900 mb-2">Tech Stack</dt>
+                        <ul id="project-icons" class="projectIcons-1"></ul>
+                    </div>
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900 mb-5">Preview</dt>
+                        <h3 class="project-links">
+                            <a target="_blank" class="font-bold text-indigo-600" href="https://michaelchatapp-backend.onrender.com/">Deploy server</a> | 
+                            <a target="_blank" class="font-bold text-indigo-600" href="https://michaelchatapp.onrender.com/">Live site</a> | 
+                            <a target="_blank" class="font-bold text-indigo-600" href="https://github.com/MichaelChung888/MichaelChatApp-Frontend">Github</a>
+                        </h3>
+                    </div>
+                    </dl>
+                </div>
+
+                <div class="grid grid-cols-2 grid-rows-1 gap-4 sm:gap-6 lg:gap-8 lg:col-start-1 lg:row-start-1 hiddenAnim-left">
+                    <img src="styles/images/chatapp-1.png" class="rounded-lg bg-gray-100 object-cover h-[100%]">
+                    <img src="styles/images/chatapp-2.png" class="rounded-lg bg-gray-100">
+                </div>
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-2xl items-center px-4 py-24 sm:px-3 sm:py-24 lg:max-w-7xl lg:px-8">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2 z-10 bg-white sm:px-3 sm:py-8">          
+                <div class="hiddenAnim-left">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">WeatherApp</h2>
+                    <p class="mt-4 text-gray-500">An application that gives you the weather forecast of any desired location. It includes features such as a dynamic search bar and a map UI fetched from MapBox API. The rest of the weather data comes from OpenWeatherMap API.</p>
+            
+                    <dl class="mt-4 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+                        <div class="border-t border-gray-200 pt-4">
+                            <dt class="font-medium text-gray-900 mb-2">Tech Stack</dt>
+                            <ul id="project-icons" class="projectIcons-2"></ul>
+                        </div>
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900 mb-5">Preview</dt>
+                        <h3 class="project-links">
+                            <a target="_blank" class="font-bold text-indigo-600" href="https://michaelchung888.github.io/WeatherApp/">Live site</a> | 
+                            <a target="_blank" class="font-bold text-indigo-600" href="https://github.com/MichaelChung888/WeatherApp">Github</a>
+                        </h3>
+                    </div>
+                    </dl>
+                </div>
+
+                <div class="grid grid-cols-2 grid-rows-1 gap-4 sm:gap-6 lg:gap-8 hiddenAnim-right">
+                    <img src="styles/images/weatherapp-1.png" class="rounded-lg bg-gray-100">
+                    <img src="styles/images/weatherapp-2.png" class="rounded-lg bg-gray-100">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="relative isolate overflow-hidden bg-gray-900 py-20 sm:py-[150px]">
+        <!-- Background Decoration-->
+        <div class="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
+            <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+
+        <!-- Main Section -->
+        <div class="mx-auto max-w-2xl sm:text-center hiddenAnim">
+            <h2 class="text-4xl font-bold tracking-tight text-white px-6 sm:text-6xl sm:px-0">Let's Work Together ...</h2>
+            <p class="mt-10 text-lg leading-8 text-gray-300 px-6 sm:px-0">Thank you for viewing my portfolio. If you have any questions about me or my projects, feel free to contact me</p>
+        </div>
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <form id="form-id" class="px-6 sm:px-0 hiddenAnim anim200">
+                <div class="mt-5">
+                    <input id="name" placeholder="Your Name" name="name" autocomplete="name" required class="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder-indigo-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+
+                <div class="mt-5">
+                    <input id="email" placeholder="Your Email" name="email" type="email" autocomplete="email" required class=" block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder-indigo-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+
+                <div class="mt-5">
+                    <textarea id="message" placeholder="Your Message" name="message" rows="3" class="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder-indigo-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                </div>
+
+                <div class="mt-5">
+                    <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+                </div>
+            </form>
+            <div class="contact-icons grid grid-cols-3 gap-x-8 gap-y-16 sm:px-3 justify-items-center mt-10">    
+                <a href="https://github.com/MichaelChung888" target="_blank"><i id="icons" class="hiddenAnim anim400 h-12 w-12 fa-brands fa-github p-2 fa-2x rounded-lg bg-indigo-900 text-white hover:bg-indigo-600"></i></a>
+                <a href="https://www.linkedin.com/in/michael-chung-528428263/" target="_blank"><i id="icons" class="hiddenAnim anim600 text-center h-12 w-12 mx-auto fa-brands fa-linkedin p-2 fa-2x rounded-lg bg-indigo-900 text-white hover:bg-indigo-600"></i></a>
+                <a href="mailto: michaelyiuhonchung@gmail.com" target="_blank"><i id="icons" class="hiddenAnim anim800 text-center h-12 w-12 fa-solid fa-envelope fa-2x p-2 rounded-lg bg-indigo-900 text-white hover:bg-indigo-600"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-indigo-950 flex items-center justify-center h-10">
+        <p class="text-md text-white">Developed by Michael Chung<span class="text-red-600"> @2024</span></p>
+    </div>
 </body>
 </html>
