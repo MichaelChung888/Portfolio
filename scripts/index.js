@@ -41,12 +41,22 @@ hiddenElements.forEach((el) => observer.observe(el)); //Take each html element i
 //                                    Navbar Scroll                                     //
 //--------------------------------------------------------------------------------------//
 
-const nav = document.getElementById("navbar");
-const navHeight = nav.offsetHeight;
+const nav = document.getElementById("navbar")
 const navList = document.querySelectorAll("#navbar-list a");
-const aboutTop = document.getElementById("about").offsetTop;
-const projectTop = document.getElementById("project").offsetTop;
-const contactTop = document.getElementById("contact").offsetTop;
+
+var nav_height, home_height, about_height, project_height, aboutTop, projectTop, contactTop
+
+setTimeout(() => {
+    nav_height = nav.offsetHeight;
+    home_height = document.getElementById("home").offsetHeight;
+    about_height = document.getElementById("about").offsetHeight;
+    project_height = document.getElementById("project").offsetHeight;
+
+    aboutTop = home_height - nav_height
+    projectTop = about_height + home_height - nav_height
+    contactTop = project_height + about_height + home_height - nav_height
+}, 1);
+
 let timer = false;
 
 window.addEventListener("scroll", () => {
@@ -56,17 +66,17 @@ window.addEventListener("scroll", () => {
         navList.forEach(e => e.style.color = "#111827");
         navList.forEach(e => e.classList.remove("underline"))
         navList[0].classList.add("underline")
-    } else if (topViewPort <= aboutTop - navHeight) {
+    } else if (topViewPort <= aboutTop) {
         nav.style.backgroundColor = "#fff";
         navList.forEach(e => e.style.color = "#111827");
         navList.forEach(e => e.classList.remove("underline"))
         navList[0].classList.add("underline")
-    } else if (topViewPort <= projectTop - navHeight) {
+    } else if (topViewPort <= projectTop) {
         nav.style.backgroundColor = "#111827";
         navList.forEach(e => e.style.color = "#fff");
         navList.forEach(e => e.classList.remove("underline"))
         navList[1].classList.add("underline")
-    } else if (topViewPort <= contactTop - navHeight) {
+    } else if (topViewPort <= contactTop) {
         nav.style.backgroundColor = "#fff";
         navList.forEach(e => e.style.color = "#111827");
         navList.forEach(e => e.classList.remove("underline"))
@@ -143,10 +153,11 @@ emailjs.init("TzoKCIF6zHtrSca6D");
 
 function Submit(event) {
     event.preventDefault();
-    console.log("hello")
+
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
+    const submit_button = document.getElementById("submit-button");
 
     const templateParams = {
         from_name: name,
@@ -154,11 +165,19 @@ function Submit(event) {
         message: message
     };
 
+    submit_button.innerHTML = `
+        <div class="flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm"><i class="fa-solid fa-spinner fa-spin fa-2x"></i></div>
+    `    
     emailjs.send('service_kj75q4a', 'template_9hrz1og', templateParams, 'TzoKCIF6zHtrSca6D')
     .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+        submit_button.innerHTML = `
+            <div class="flex w-full justify-center items-center rounded-md bg-lime-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm">Sent <i class="fa-solid fa-check ml-3 mt-[1px] fa-lg text-white"></i></p></div>
+        `
     }, (err) => {
-        console.log('FAILED...', err);
+        submit_button.innerHTML = `
+            <p class="text-red-600 text-center">${err.text}</p>
+            <button type="submit" class="mt-5 flex w-full justify-center items-center bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 rounded-md" style="border:2px solid red">Send again</button>
+        `
     });
 }
 
